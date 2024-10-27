@@ -1,0 +1,48 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="Sida-1" id="-jQkhnTfDdet3lGFijx7">
+    <mxGraphModel dx="1098" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PJlQ_n1uTGGIcaRoA8Un-1" value="C2 server" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="90" width="260" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="PJlQ_n1uTGGIcaRoA8Un-2" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="339" y="180" as="sourcePoint" />
+            <mxPoint x="489" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PJlQ_n1uTGGIcaRoA8Un-3" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="150" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PJlQ_n1uTGGIcaRoA8Un-8" value="Client" style="swimlane;startSize=20;horizontal=1;childLayout=treeLayout;horizontalTree=0;sortEdges=1;resizable=0;containerType=tree;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="300" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="PJlQ_n1uTGGIcaRoA8Un-9" value="&lt;div&gt;C2 Client asker&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="PJlQ_n1uTGGIcaRoA8Un-8">
+          <mxGeometry x="100" y="40" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PJlQ_n1uTGGIcaRoA8Un-10" value="ARP lister" style="whiteSpace=wrap;html=1;" vertex="1" parent="PJlQ_n1uTGGIcaRoA8Un-8">
+          <mxGeometry x="20" y="130" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PJlQ_n1uTGGIcaRoA8Un-11" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" parent="PJlQ_n1uTGGIcaRoA8Un-8" source="PJlQ_n1uTGGIcaRoA8Un-9" target="PJlQ_n1uTGGIcaRoA8Un-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PJlQ_n1uTGGIcaRoA8Un-12" value="DHCP Server" style="whiteSpace=wrap;html=1;" vertex="1" parent="PJlQ_n1uTGGIcaRoA8Un-8">
+          <mxGeometry x="120" y="130" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PJlQ_n1uTGGIcaRoA8Un-13" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;" edge="1" parent="PJlQ_n1uTGGIcaRoA8Un-8" source="PJlQ_n1uTGGIcaRoA8Un-9" target="PJlQ_n1uTGGIcaRoA8Un-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PJlQ_n1uTGGIcaRoA8Un-21" value="DNS Server" style="whiteSpace=wrap;html=1;" vertex="1" parent="PJlQ_n1uTGGIcaRoA8Un-8">
+          <mxGeometry x="220" y="130" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PJlQ_n1uTGGIcaRoA8Un-22" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;rounded=1;curved=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startSize=6;endSize=6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="PJlQ_n1uTGGIcaRoA8Un-8" target="PJlQ_n1uTGGIcaRoA8Un-21" source="PJlQ_n1uTGGIcaRoA8Un-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="280" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
