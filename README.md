@@ -2,8 +2,10 @@
 by Jonas "SweJob" Bergstedt
 
 This is the overall README for the whole project.
+[Table of Tools](#table-of-tools)
+[Directory structure]
 
-### Requirements for project and how they are met:  
+### Requirements for project  
 
 #### Toolbox
 Build at toolbox with server Python-script that can be used for pentesting or otherwise in the IT-security field.  
@@ -29,7 +31,7 @@ Use techniques and packages that we have lookad at during the course or knowledg
 - Put everything in a Github repo. Either create a readme-file for each tool (separeate them into folders) or one readme with all tools listed.
 - Make sure the repo is public (or invite teacher if you want to keep it private) and post link as submission
 
-#### Table of met requirements for the various tools: (link to their README.md respectively in the Tool name)
+#### Table of tools and requirements: (link to their README.md respectively in the Tool name)
 |Tool                                                   |Ext.lib.|Argp.|Readme|Instr.|Error<br>handl.|Input<br>valid.|Func.| Adv. func.|
 |-------------------------------------------------------|--------|-----|------|------|---------------|---------------|-----|-----------|
 |[c2_server](./src/server/README.md)                    | urwid  | yes | yes  | yes  | yes           | yes           | yes |Multi-threading,<br> non-blocking sockets,<br>classes|
@@ -103,7 +105,7 @@ In the [structure.txt](./structure.txt) you see what the directory structure loo
         9. `stop_client` - stops all continuous fucntions and then terminates the client.
 
 #### Example of how to use some functions
-##### Run os command
+##### run_os
 After the connection between server and client is established, enter `c run_os dir`  
 This will show the directory on the client.
 As the command is run and then stops, all `c run_os [command]` will start in this directory.  
@@ -120,6 +122,53 @@ dir
 type *.txt
 ```
 The last line will run this script and display output in the output window.
+
+###### arp_sniffer
+To find out MAC-adreses on the network of the client you could do something like this.  
+1. `c if_list` - this will provide a list of interfaces, similar to this:  
+```
+> Ethernet : 192.168.1.137
+> VMware Network Adapter VMnet8 : 192.168.232.1
+> Bluetooth-nätverksanslutning : 169.254.141.130
+> Tailscale : 100.112.50.61
+> Loopback Pseudo-Interface 1 : 127.0.0.1
+```
+2. `c arp_sniffer 192.168.1.137` - this will start the arp_sniffer listening on the interface connected to 192.168.1.137  
+After a while your Output window could show something like this:
+```
+> Detected: MAC=aa:bb:cc:dd:ee:ff, IP=192.168.1.1, Hostname=None
+> Detected: MAC=bb:cc:dd:ee:ff:aa, IP=192.168.1.179, Hostname=None
+> Detected: MAC=cc:dd:ee:ff:aa:bb, IP=192.168.1.214, Hostname=None
+> Detected: MAC=dd:ee:ff:aa:bb:cc, IP=192.168.1.137, Hostname=None
+> Detected: MAC=cc:dd:ee:ff:aa:bb, IP=0.0.0.0, Hostname=None
+```
+As long as the arp_sniffer is running it will keep looking for new adresses and send them to be displyed by the server.
+3. `c get_hosts' - displays a formated list of hosts detected so far, grouped on MAC addresses with all connected IP addresses
+```
+> Discovered ARP hosts:
+> MAC: aa:bb:cc:dd:ee:ff
+>   IPs:
+>        192.168.1.1
+> ----------------------
+> MAC: bb:cc:dd:ee:ff:aa
+>   IPs:
+>        192.168.1.179
+> ----------------------
+> MAC: cc:dd:ee:ff:aa:bb
+>   IPs:
+>        192.168.1.214
+>        0.0.0.0
+> ----------------------
+> MAC: dd:ee:ff:aa:bb:cc
+>   IPs:
+>        192.168.1.137
+> ----------------------
+```
+4. `c stop arp_sniffer' - this will stop the sniffer (usually take a few seconds, as the present sniff needs to timeout)
+```
+> Stopping arp_sniffer
+> Function is stopped: arp_sniffer
+```
 
 ### Known limitations
 When a continuous functions stops by an error or by a timeout, the Status value that is parsed, sent and shown in the Status window in hte server is not set to "Stopped".
