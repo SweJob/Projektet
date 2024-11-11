@@ -1,0 +1,34 @@
+Toolbox
+Bygg en toolbox bestående av flera Python-script som kan användas för penetrationstester eller inom IT-säkerhet.
+
+Använd dig av de tekniker och paket som vi gått igenom under kursen eller kunskap du har sedan tidigare.
+
+
+Krav för varje verktyg:
+Verktyget ska använda minst ett externt Python-bibliotek (t.ex. requests, shodan, cryptography, scapy, nmap osv).
+
+Verktyget ska använda argparse och kunna köras med argument från terminalen (undantag om verktyget inte behöver ta någon input från användaren)
+
+Verktyget ska innehålla en README-fil med instruktioner om hur verktyget används, exempelkörningar och kända begränsningar.
+
+
+För Godkänt krävs:
+Minst tre verktyg från olika kategorier (viktigt: Du får använda dina verktyg från laborationerna. Men se till att de följer kraven för uppgiften)
+
+Verktygen ska innehålla tydliga instruktioner för användning
+
+Koden ska innehålla grundläggande felhantering (t.ex. try-except), inmatningsvalidering och vara strukturerad i funktioner.
+
+
+För Väl godkänt:
+Inkludera ytterligare/mer avancerade funktioner såsom logging, rapportgenerering eller ett mainscript som importerar de andra skripten och interaktivt låter användaren köra dem
+
+Implementera fler än tre verktyg för att visa din kunskap av fler Python-paket
+
+Verktygen ska vara väl dokumenterade
+
+
+Inlämning:
+Lägg upp allting i ett Github repo. Skapa antingen en readme fil för varje verktyg (separera med folders) eller en readme med alla verktyg listade.
+
+Se till att repot är public (eller bjud in mig om du vill hålla det privat) och lämna länken som inlämning.

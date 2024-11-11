@@ -1,2 +1,3 @@
-old_code/
-structure.txt
+__pycache__
+debug.log
+output.txt

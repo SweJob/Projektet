@@ -1,0 +1,32 @@
+projektet/
+├── src/
+│   ├── server/
+│   │   ├── c2_server.py          # Server to control the client from.
+│   │   └── README.md             # Readme.md for the c2_server
+│   │
+│   ├── client/
+│   │   ├── client_shell.py       # The client code that communicates with c2_server
+│   │   ├── README.md             # Readme for client shell
+│   │   │
+│   │   ├──arp_sniffer/
+│   │   │   ├── arp_sniffer.py    # ARP sniffer. CLI and for client_shell
+│   │   │   └── README.md         # Readme for arp_sniffer
+│   │   │
+│   │   ├── if_lister.py
+│   │   │   ├── if_lister.p       # list interfaces and IP's
+│   │   │   └── README.md         # Readme for if_lister
+│   │   │
+│   │   └── run_os_command/ 
+│   │       ├── run_os_command.py # Run a command in OS of client_shell
+│   │       └── README.md         # Readme for run_os_command
+│   │   
+│   └── util/
+│       ├── crypto_tool/
+│       │   ├── crypto_tool.py    # Encryption tool (upgrade from from Lab 2)
+│       │   └── README.md         # Readme for crypto_tool
+│       │
+│       └── ip_addr_chk/          
+│           ├── ip_addr_chk.py    # Checks validity of IP address
+│           └── README.md         # Readme for ip_addr_chk
+│
+└── README.md
