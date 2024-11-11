@@ -1,9 +1,14 @@
 # The project 
 by Jonas "SweJob" Bergstedt
 
-This is the overall README for the whole project.
-[Table of Tools](#table-of-tools)
-[Directory structure]
+This is the overall README for the whole project.  
+List of contents:  
+[Requirements](#requirements-for-project)  
+[Table of Tools](#table-of-tools-and-requirements)  
+[Directory structure](#file--and-directory-structure-of-project)  
+[Idea behind project](#main-idea-of-my-project)  
+[Usage](#usage-for-the-overall-project)
+[Examples](#example-of-how-to-use-some-functions)
 
 ### Requirements for project  
 
@@ -31,7 +36,8 @@ Use techniques and packages that we have lookad at during the course or knowledg
 - Put everything in a Github repo. Either create a readme-file for each tool (separeate them into folders) or one readme with all tools listed.
 - Make sure the repo is public (or invite teacher if you want to keep it private) and post link as submission
 
-#### Table of tools and requirements: (link to their README.md respectively in the Tool name)
+#### Table of tools and requirements: 
+(link to their README.md respectively in the Tool name)
 |Tool                                                   |Ext.lib.|Argp.|Readme|Instr.|Error<br>handl.|Input<br>valid.|Func.| Adv. func.|
 |-------------------------------------------------------|--------|-----|------|------|---------------|---------------|-----|-----------|
 |[c2_server](./src/server/README.md)                    | urwid  | yes | yes  | yes  | yes           | yes           | yes |Multi-threading,<br> non-blocking sockets,<br>classes|
@@ -81,8 +87,9 @@ In the [structure.txt](./structure.txt) you see what the directory structure loo
 - Any output from client is put in a response-list. This list is continously monitored and sent to the server, when there is a connection. The server prints this in the output window. If the connection breaks while the client is running, the list will keep getting entries that will be sent as soon as the connection is back up again.
 - Both client and server will try to reestablish a connection if it's lost. 
 
-### Usage for the overall project
-1. Start the server, binding it to a network interface that is able to communicate witht he client
+### Usage for the overall project  
+For more details, look in each separete tools README.md. [List of tools are here](#table-of-tools-and-requirements)
+1. Start the server, binding it to a network interface that is able to communicate with the client
 2. Start the client, telling it the IP address of the server
 3. **User interaction**
    1. Enter commands at the command prompt in the server
@@ -123,7 +130,7 @@ type *.txt
 ```
 The last line will run this script and display output in the output window.
 
-###### arp_sniffer
+##### arp_sniffer
 To find out MAC-adreses on the network of the client you could do something like this.  
 1. `c if_list` - this will provide a list of interfaces, similar to this:  
 ```
@@ -135,14 +142,14 @@ To find out MAC-adreses on the network of the client you could do something like
 ```
 2. `c arp_sniffer 192.168.1.137` - this will start the arp_sniffer listening on the interface connected to 192.168.1.137  
 After a while your Output window could show something like this:
-```
+``` 
 > Detected: MAC=aa:bb:cc:dd:ee:ff, IP=192.168.1.1, Hostname=None
 > Detected: MAC=bb:cc:dd:ee:ff:aa, IP=192.168.1.179, Hostname=None
 > Detected: MAC=cc:dd:ee:ff:aa:bb, IP=192.168.1.214, Hostname=None
 > Detected: MAC=dd:ee:ff:aa:bb:cc, IP=192.168.1.137, Hostname=None
 > Detected: MAC=cc:dd:ee:ff:aa:bb, IP=0.0.0.0, Hostname=None
 ```
-As long as the arp_sniffer is running it will keep looking for new adresses and send them to be displyed by the server.
+     As long as the arp_sniffer is running it will keep looking for new adresses and send them to be   displayed by the server.
 3. `c get_hosts' - displays a formated list of hosts detected so far, grouped on MAC addresses with all connected IP addresses
 ```
 > Discovered ARP hosts:
@@ -163,13 +170,12 @@ As long as the arp_sniffer is running it will keep looking for new adresses and 
 >   IPs:
 >        192.168.1.137
 > ----------------------
-```
-4. `c stop arp_sniffer' - this will stop the sniffer (usually take a few seconds, as the present sniff needs to timeout)
+```  
+4. `c stop arp_sniffer` - this will stop the sniffer (usually take a few seconds, as the present sniff needs to timeout)  
 ```
 > Stopping arp_sniffer
 > Function is stopped: arp_sniffer
 ```
 
 ### Known limitations
-When a continuous functions stops by an error or by a timeout, the Status value that is parsed, sent and shown in the Status window in hte server is not set to "Stopped".
-In the output window you will see a text saying that the function has stopped. To update the status, you can run c stop [function] to update the status. Note: If the function still is running, it will stop.
+When a continuous functions stops by an error or by a timeout, the Status value that is parsed, sent and shown in the Status window in the server is not set to "Stopped", but in the output window you will see a text saying that the function has stopped. To update the status, you can run `c stop [function]` to update the status. Note: If the function still is running when you run the stop command, it will stop.
