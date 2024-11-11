@@ -49,7 +49,7 @@ Additional functions :
 2. Mainscript that imports other scripts : FunctionManager class in client_shell is kind of built on this concept.
 3. More advanced functions : Multithreading, keeping track of non-blocking sockets and their state, reconnecting logic in both server and client.
 4. More than three tools : depending on how you count and what you count.
-5. Well documented : There is probaly room for improvements (feedback is welcome)
+5. Well documented : There is probaly room for improvements (feedback is welcome)  
 Github :  
 1. Everything in a repo : https://github.com/SweJob/Projektet
 2. Repo made public :
