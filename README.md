@@ -29,7 +29,7 @@ Use techniques and packages that we have lookad at during the course or knowledg
 - Put everything in a Github repo. Either create a readme-file for each tool (separeate them into folders) or one readme with all tools listed.
 - Make sure the repo is public (or invite teacher if you want to keep it private) and post link as submission
 
-#### Table of met requirements for the various tools:
+#### Table of met requirements for the various tools: (link to their README.md respectively in the Tool name)
 |Tool                                                   |Ext.lib.|Argp.|Readme|Instr.|Error<br>handl.|Input<br>valid.|Func.| Adv. func.|
 |-------------------------------------------------------|--------|-----|------|------|---------------|---------------|-----|-----------|
 |[c2_server](./src/server/README.md)                    | urwid  | yes | yes  | yes  | yes           | yes           | yes |Multi-threading,<br> non-blocking sockets,<br>classes|
@@ -49,7 +49,8 @@ Additional functions :
 2. Mainscript that imports other scripts : FunctionManager class in client_shell is kind of built on this concept.
 3. More advanced functions : Multithreading, keeping track of non-blocking sockets and their state, reconnecting logic in both server and client.
 4. More than three tools : depending on how you count and what you count.
-5. Well documented : There is probaly room for improvements (feedback is welcome)  
+5. Well documented : There is probaly room for improvements (feedback is welcome)
+
 Github :  
 1. Everything in a repo : https://github.com/SweJob/Projektet
 2. Repo made public :
