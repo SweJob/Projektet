@@ -33,19 +33,17 @@ import time
 import json
 import struct
 import argparse
-from .if_lister import if_lister
-from .run_os_command import run_os_command
-from .arp_sniffer import arp_sniffer
+from if_lister import if_lister
+from run_os_command import run_os_command
+from arp_sniffer import arp_sniffer
 
 # add parent directory to pythonpath
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from utils.crypto_tool.crypto_tool import encrypt_pwd, decrypt_pwd
 from utils.ip_addr_chk.ip_addr_chk import ip_type
 
-
 # Global constants
 RETRY_INTERVAL = 10 # Value to try to reconnect to the server
-
 
 # Global variables
 server_address = "127.0.0.1"
